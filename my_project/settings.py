@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-saramehlis-chilledbeans-nn9m9sp1w0b.ws-eu108.gitpod.io', '.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io', 'https://*.herokuapp.com']
