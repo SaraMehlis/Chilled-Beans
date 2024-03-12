@@ -5,6 +5,6 @@ from .models import Recipe
 # Create your views here.
 class RecipeListView(ListView):
     model = Recipe
-    template_name = "blog/recipe_list.html"
+    template_name = "index.html"
     context_object_name = 'recipes'
     
