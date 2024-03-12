@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Views Part 1</title>
-</head>
+{% block content %}
 
-<body>
-    <h1>Recipe list</h1>
-    {% for post in object_list %}
-    <h2>{{post.title}}</h2>
-    
-    <p>{{post.excerpt}}</p>
-    
+<div class="container mt-5">
+    <h2 class="text-center p-2">Love coffee but looking for something new to try?</h2>
+    <p class="justify-text">Check out my amazing iced coffee recipes that will make your taste buds jump for joy.
+        You can customize it however you like with milk, sugar, or flavored syrups.</p>
+    <p class="justify-text">With those recipes, you can make iced coffee that’s just as delicious (or even more delicious)
+        than what you’d get at your favorite coffee shop. Plus, it won’t cost you a fortune. All of the recipes are easy
+        to follow and use ingredients that are readily available in most grocery stores.</p>
+    <p class="justify-text">Check them out below!</p>
+</div>
+<ul>
+    {% for recipe in recipes %}
+        <li>{{ recipe.title }}</li>
     {% endfor %}
-</body>
-
-</html>
+</ul>
+{% endblock %}

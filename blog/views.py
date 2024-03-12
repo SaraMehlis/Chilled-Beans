@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from django.views import generic
+from django.views.generic import ListView 
 from .models import Recipe
 
 # Create your views here.
-class RecipeList(generic.ListView):
-    queryset = Recipe.objects.all()
-    template_name = "recipe_list.html"
+class RecipeListView(ListView):
+    model = Recipe
+    template_name = "blog/recipe_list.html"
+    context_object_name = 'recipes'
     
