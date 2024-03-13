@@ -3,3 +3,51 @@
 
 {% block content %}
 
+<div id="recipe-detail-container">
+
+    <div id="details">
+        <div>
+            <h1 style="text-align: center;">{{ recipe.title }}</h1>
+            {% if recipe.image %}
+            <img src="{{ recipe.image.url }}" style="max-width: 300px;" id="detail-image" alt="{{ recipe.title }}">
+            {% else %}
+            <p>No Image</p>
+            {% endif %}
+        </div>
+        <div class="description-1">
+            <h2>Ingredient:</h2>
+            <p>{{ recipe.ingredient }}</p>
+            <h2>Instruction:</h2>
+            <p>{{ recipe.instruction }}</p>
+            <h2>Nutrition Information:</h2>
+            <p>{{ recipe.nutrition_information }}</p>
+            <h2>Added by:</h2>
+            <p>{{ recipe.created_by }}</p>
+            <h2>Created On:</h2>
+            <p>{{ recipe.created_on }}</p>
+            <div>
+                {% if user.is_authenticated %}
+                {% if recipe.user == user %}
+            <div id="edit" class="text-center mt-4">
+                <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-outline-warning">Edit</a>
+                <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-danger">Delete</a>
+            </div>
+            {% else %}
+            <div id="contact-seller" class="text-center mt-4">
+                <a href="" class="btn btn-success">Add to favorite</a>
+            </div>
+            
+            {% endif %}
+            {% endif %}
+                
+               
+            </div>
+           
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}
