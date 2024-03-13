@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView 
+from django.contrib import messages
 from .models import Recipe
 from .form import RecipeForm
 
@@ -27,7 +28,7 @@ def recipeform(request):
             recipe = form.save(commit=False)
             recipe.user = request.user
             form.save()
-            message = 'recipe added successfully'
+            message = 'Recipe added successfully'
             return render(request, 'blog/confirmation.html', {'message': message})
     else:
         form = RecipeForm()   
