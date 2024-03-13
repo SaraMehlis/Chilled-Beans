@@ -8,6 +8,31 @@ main {
     min-height: 100vh;
 }
 
+/* Navbar styling */
+.navbar-toggler {
+    border: none;
+}
+
+.nav-link {
+    font-size: 18px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #CD853F;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
 /*about page*/
 .wrapper {
     min-height: 100vh;
@@ -42,4 +67,14 @@ main {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+/*footer*/
+footer {
+    height: 100px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: absolute;
+
 }
