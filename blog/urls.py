@@ -7,4 +7,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('recipe/<slug:slug>/', views.recipe_detail, name='recipe_detail'),
     path("accounts/", include("allauth.urls")),
+    path('form/', views.recipeform, name='recipeform'),
 ]

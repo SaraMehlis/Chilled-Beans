@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView 
 from .models import Recipe
+from .form import RecipeForm
 
 # Create your views here.
 class RecipeListView(ListView):
@@ -18,3 +19,19 @@ def recipe_detail(request, slug):
     }
     
     return render(request, 'blog/recipe_detail.html', context)
+
+def recipeform(request):
+    form = RecipeForm(request.POST, request.FILES)
+    if request.method == 'POST':
+        if form.is_valid():
+            recipe = form.save(commit=False)
+            recipe.user = request.user
+            form.save()
+            message = 'recipe added successfully'
+            return render(request, 'blog/confirmation.html', {'message': message})
+    else:
+        form = RecipeForm()   
+
+
+    return render(request, 'blog/add_recipe.html', {'form': form})
+
