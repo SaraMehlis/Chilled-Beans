@@ -7,4 +7,7 @@ class RecipeListView(ListView):
     model = Recipe
     template_name = "index.html"
     context_object_name = 'recipes'
+
+def about(request):
+    return render(request, 'blog/about.html')
     
