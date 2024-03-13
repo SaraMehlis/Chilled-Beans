@@ -4,28 +4,29 @@
 {% block content %}
 
 
+<div class="container mt-5">
+    <h1>Welcome to Chilled Beans Blog!</h1>
+    <p>We're thrilled to have you here. Explore our collection of delicious iced coffee recipes and start your journey into the wonderful world of coffee!</p>
+</div>
 
-
-    {{ user_favourite_recipes }}
-    <div class="container d-flex flex-row flex-wrap justify-content-center">
+<div class="container mt-5">
+    <h2>Featured Recipes</h2>
+    <div class="row">
         {% for recipe in recipes %}
-        {% if recipe.user.is_superuser %}
-        <a href="{% url 'full_recipe' pk=recipe.pk %}" class="recipes recipe-card-title"
-            aria-label="Click to view {{recipe.title}}">
-            <div class="card m-3 recipe-card">
-                <img src="{{recipe.image.url}}" alt="{{recipe.image_alt}}" class="card-img-top">
-                <div class="card-overlay">
-                    {% if recipe.is_favourite %}
-                    <i class="fa fa-star icon-favourite card-overlay-icon"></i>
-                    {% endif %}
-                </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static recipe.image.url %}" class="card-img-top" alt="{{ recipe.title }}">
                 <div class="card-body">
-                    <h2 class="card-title recipe-card-title">{{recipe.title}}</h2>
+                    <h5 class="card-title">{{ recipe.title }}</h5>
+                    <p class="card-text">{{ recipe.description }}</p>
+                    <a href="{% url 'recipe_detail' recipe.id %}" class="btn btn-primary">View Recipe</a>
                 </div>
             </div>
-        </a>
-        {% endif %}
+        </div>
         {% endfor %}
     </div>
 </div>
+
 {% endblock %}
+
+    

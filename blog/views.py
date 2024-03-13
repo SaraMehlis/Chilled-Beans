@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView 
 from .models import Recipe
 
@@ -11,3 +11,10 @@ class RecipeListView(ListView):
 def about(request):
     return render(request, 'blog/about.html')
     
+def recipe_detail(request, slug):
+    recipe = get_object_or_404(Recipe, slug=slug)
+    context = { 
+        'recipe': recipe
+    }
+    
+    return render(request, 'blog/recipe_detail.html', context)
