@@ -10,6 +10,11 @@ class RecipeListView(ListView):
     template_name = "index.html"
     context_object_name = 'recipes'
 
+#def get_context_data(self, **kwargs):
+#        context = super().get_context_data(**kwargs)
+#        context['recipes'] = Recipe.objects.all()  
+#        return context
+
 def about(request):
     return render(request, 'blog/about.html')
     
@@ -26,7 +31,8 @@ def recipeform(request):
     if request.method == 'POST':
         if form.is_valid():
             recipe = form.save(commit=False)
-            recipe.user = request.user
+            recipe.created_by = request.user
+            recipe.slug = slugify(recipe.title) 
             form.save()
             message = 'Recipe added successfully'
             return render(request, 'blog/confirmation.html', {'message': message})
