@@ -28,7 +28,7 @@
             <p>{{ recipe.created_on }}</p>
             <div>
                 {% if user.is_authenticated %}
-                {% if recipe.user == user %}
+                {% if recipe.created_by == user %}
             <div id="edit" class="text-center mt-4">
                 <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-outline-warning">Edit</a>
                 <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-outline-danger">Delete</a>

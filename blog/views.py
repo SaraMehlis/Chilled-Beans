@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import ListView 
 from django.contrib import messages
 from .models import Recipe
 from .form import RecipeForm
 from django.utils.text import slugify
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 class RecipeListView(ListView):
@@ -22,7 +23,8 @@ def about(request):
 def recipe_detail(request, slug):
     recipe = get_object_or_404(Recipe, slug=slug)
     context = { 
-        'recipe': recipe
+        'recipe': recipe,
+        'user': request.user  # Pass the current user to the context to show edit and delete button
     }
     
     return render(request, 'blog/recipe_detail.html', context)
@@ -43,3 +45,19 @@ def recipeform(request):
 
     return render(request, 'blog/add_recipe.html', {'form': form})
 
+def edit_recipe(request, slug):
+    recipe = Recipe.objects.get(slug=slug)
+    form = Form(request.POST or None, request.FILES or None,  instance=recipe)
+    if form.is_valid():
+        form.save()
+        return redirect('index')
+    return render(request, 'blog/edit_recipe.html', {'form': form, 'recipe': recipe})
+
+def delete_recipe(request, slug):
+    recipe = Recipe.objects.filter(slug=slug)
+    recipe.delete()
+    message = 'Recipe deleted successfully.'
+    context = {'message': message,
+               'recipe': recipe}
+
+    return render(request, 'blog/delete.html', context)
