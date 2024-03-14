@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView 
 from django.contrib import messages
 from .models import Recipe
@@ -47,7 +47,7 @@ def recipeform(request):
 
 def edit_recipe(request, slug):
     recipe = Recipe.objects.get(slug=slug)
-    form = Form(request.POST or None, request.FILES or None,  instance=recipe)
+    form = RecipeForm(request.POST or None, request.FILES or None,  instance=recipe)
     if form.is_valid():
         form.save()
         return redirect('index')
