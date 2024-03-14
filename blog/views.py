@@ -3,6 +3,7 @@ from django.views.generic import ListView
 from django.contrib import messages
 from .models import Recipe
 from .form import RecipeForm
+from django.utils.text import slugify
 
 # Create your views here.
 class RecipeListView(ListView):
