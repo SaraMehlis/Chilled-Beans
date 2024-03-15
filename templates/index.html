@@ -6,7 +6,10 @@
 
 <div class="container mt-5">
     <h1>Welcome to Chilled Beans Blog!</h1>
-    <p>We're thrilled to have you here. Explore our collection of delicious iced coffee recipes and start your journey into the wonderful world of coffee!</p>
+    <br>
+    <h2>We're thrilled to have you here.</h2>
+    <br>
+    <h2> Explore our collection of delicious iced coffee recipes and start your journey into the wonderful world of coffee!</h2>
 </div>
 
 <div class="container mt-5">
@@ -22,8 +25,7 @@
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ recipe.title }}</h5>
-                    <p class="card-text">{{ recipe.description }}</p>
-                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-primary">View Recipe</a>
+                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn">View Recipe</a>
                 </div>
             </div>
         </div>

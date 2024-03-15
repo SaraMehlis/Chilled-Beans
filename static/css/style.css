@@ -3,6 +3,9 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* This ensures that the body fills at least the height of the viewport */
@@ -17,17 +20,34 @@ main {
 }
 
 /* Navbar styling */
+.navbar-brand {
+    color: #a46f35;
+    font-family: 'Arial', sans-serif; 
+    font-size: 24px;
+}
+
 .navbar-toggler {
     border: none;
 }
 
 .nav-link {
     font-size: 18px;
+    color: #CD853F;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #CD853F;
+.nav-link:hover {
+    color: #a46f35;
+}
+
+
+.navbar::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #a46f35;
+    position: absolute;
+    top: 100%;
 }
 
 body {
@@ -40,20 +60,64 @@ main {
     flex: 1;
 }
 
+.card {
+    border-color: #a46f35;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #CD853F;
+    font-weight: bold;
+}
+
+.btn:hover {
+    color: #a46f35;
+}
+
+.recipe-detail-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.recipe-details-left {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.recipe-details-right {
+    flex: 1;
+    text-align: left;
+}
+
+#detail-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
 
 /*about page*/
+
+
 .wrapper {
     min-height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: -8%;
 }
 
 
 .about {
-    padding: 20px 0;
+    padding: 20px, 0;
+    margin-top: 0;
     color: #fff;
     text-align: center;
 }
@@ -79,7 +143,8 @@ main {
 
 /* add item page */
 .form p {
-    font-size: 16px; 
+    font-size: 16px;
+    font-weight: bold; 
     color: #333; 
     width: 50%;
 }
@@ -101,8 +166,23 @@ main {
 
 form {
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #a46f35;
     border-radius: 5px;
+}
+
+#id_image::-webkit-file-upload-button {
+    background-color: #CD853F; /* Brown color */
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Additional styling to improve appearance */
+#id_image::-webkit-file-upload-button:hover {
+    background-color: #a46f35; /* Darker brown color on hover */
 }
 
 #submit {
@@ -116,14 +196,37 @@ form {
 }
 
 #submit:hover {
-    background-color: #CD853F;
+    background-color: #a46f35;
 }
+
+.footer::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #a46f35;
+}
+
+
+.btn-signup {
+    border-color: #a46f35;
+}
+.confirm {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
 
 /*footer*/
 .footer {
     width: 100%;
     color: #CD853F; 
-    padding: 20px 0; 
+    padding: 10px 0; 
     margin-top: auto; /* Add this line to push the footer to the bottom */
 }
 
+.mb-4 {
+    text-align: center; 
+    margin-top: 20px;
+}
