@@ -50,16 +50,6 @@ main {
     top: 100%;
 }
 
-body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
 .card {
     border-color: #a46f35;
 }
@@ -77,10 +67,9 @@ main {
     color: #a46f35;
 }
 
-/*recipe detail page */
+/* Recipe Detail Page */
 #recipe-detail-container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -89,20 +78,26 @@ main {
 
 #details {
     display: flex;
-    align-items: baseline;
-    padding: 20px;
-    margin-top: auto;
+    flex-wrap: wrap; /* Ensure items wrap to the next line if they don't fit */
+    justify-content: center; /* Center the content horizontally */
+    gap: 20px; /* Add some spacing between elements */
+    max-width: 1000px; /* Limit the maximum width of the content */
+    margin-top: 20px;
 }
 
-#details>div:first-child {
-    margin-right: 2rem;
+#details > div {
+    flex: 1; /* Allow each section to grow to fill the available space */
+    min-width: 300px; /* Set a minimum width for each section */
+    max-width: 400px; /* Limit the maximum width of each section */
+    margin-bottom: 20px; /* Add some space between sections */
 }
 
 #detail-image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
     border-radius: 10px;
-    max-width: 100%;
-    height: auto;
+    margin-bottom: 20px;
 }
+
 
 .description-1 {
     display: flex;
@@ -130,6 +125,7 @@ main {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #7d6d5c;
 }
 
 
@@ -138,6 +134,7 @@ main {
     margin-top: 0;
     color: #fff;
     text-align: center;
+    height: 100%;
 }
 
 .about h1 {
@@ -189,7 +186,7 @@ form {
 }
 
 #id_image::-webkit-file-upload-button {
-    background-color: #CD853F; /* Brown color */
+    background-color: #CD853F; 
     color: #000;
     font-weight: bold;
     border: none;
@@ -198,9 +195,9 @@ form {
     cursor: pointer;
 }
 
-/* Additional styling to improve appearance */
+
 #id_image::-webkit-file-upload-button:hover {
-    background-color: #a46f35; /* Darker brown color on hover */
+    background-color: #a46f35; 
 }
 
 #submit {
@@ -244,7 +241,7 @@ form {
     width: 100%;
     color: #CD853F; 
     padding: 10px 0; 
-    margin-top: auto; /* Add this line to push the footer to the bottom */
+    text-align: center;
 }
 
 .mb-4 {
