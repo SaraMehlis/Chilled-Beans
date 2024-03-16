@@ -5,9 +5,9 @@
 {% block content %}
 
 <div id="recipe-detail-container">
-
     <div id="details">
-        <div class="recipe-details-left" >
+
+        <div>
             <h1 style="text-align: center;">{{ recipe.title }}</h1>
             {% if recipe.image %}
             <img src="{{ recipe.image.url }}" style="max-width: 300px;" id="detail-image" alt="{{ recipe.title }}">
@@ -16,14 +16,14 @@
             {% endif %}
         </div>
         <div class="description-1">
-            <div class="recipe-details-right">
-                <h2>Ingredient:</h2>
+            <div>
+                <h2>Ingredients:</h2>
                 <p>{{ recipe.ingredient }}</p>
-                <h2>Instruction:</h2>
+                <h2>Instructions:</h2>
                 <p>{{ recipe.instruction }}</p>
             </div>
 
-            <div class="recipe-details-left">
+            <div>
                 <h2>Nutrition Information:</h2>
                 <p>{{ recipe.nutrition_information }}</p>
                 <h2>Added by:</h2>
@@ -35,25 +35,25 @@
             <div>
                 {% if user.is_authenticated %}
                 {% if recipe.created_by == user %}
-            <div id="edit" class="text-center mt-4">
-                <a href="{% url 'edit_recipe' recipe.slug %}" class="btn">Edit</a>
-                <a href="{% url 'delete_recipe' recipe.slug %}" class="btn">Delete</a>
+                <div id="edit" class="text-center mt-4">
+                    <a href="{% url 'edit_recipe' recipe.slug %}" class="btn">Edit</a>
+                    <a href="{% url 'delete_recipe' recipe.slug %}" class="btn">Delete</a>
+                </div>
+                {% else %}
+                <div id="fav-recipe-btn" class="text-center mt-4">
+                    <a href="" class="btn">Add to favorite</a>
+                </div>
+
+                {% endif %}
+                {% endif %}
+
+
             </div>
-            {% else %}
-            <div id="contact-seller" class="text-center mt-4">
-                <a href="" class="btn">Add to favorite</a>
-            </div>
-            
-            {% endif %}
-            {% endif %}
-                
-               
-            </div>
-           
+
         </div>
 
-
     </div>
+
 
 </div>
 

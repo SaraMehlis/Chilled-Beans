@@ -5,6 +5,7 @@ from .models import Recipe
 from .form import RecipeForm
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 
 # Create your views here.
 class RecipeListView(ListView):
@@ -61,3 +62,23 @@ def delete_recipe(request, slug):
                'recipe': recipe}
 
     return render(request, 'blog/delete.html', context)
+
+class SearchResultsView(ListView):
+    template_name = 'blog/search_results.html'
+    model = Recipe
+    context_object_name = 'recipes'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+
+        if query:
+            recipes = Recipe.objects.filter(
+                Q(title__icontains=query) |
+                Q(instruction__icontains=query) |
+                Q(ingredient__icontains=query) 
+            )
+        else:
+            recipes = Recipe.objects.all()
+               
+
+        return recipes

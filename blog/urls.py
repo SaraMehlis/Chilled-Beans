@@ -1,4 +1,4 @@
-from .views import RecipeListView
+from .views import RecipeListView, SearchResultsView
 from django.urls import path, include
 from . import views
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path('form/', views.recipeform, name='recipeform'),
     path('recipe/edit/<slug:slug>/', views.edit_recipe, name='edit_recipe'),
     path('recipe/delete/<slug:slug>/', views.delete_recipe, name='delete_recipe'),
+    path('search/', SearchResultsView.as_view(), name='search_results'),
 ]

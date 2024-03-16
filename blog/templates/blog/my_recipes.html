@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Your Recipes{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mx-auto justify-content-center">
+        <div class="mt-5 col-lg-10 px-5 text-left">
+            <h2 class="my-3 text-center">Welcome {{request.user.username}}</h2>
+            <h4 class="my-3 text-center justify-text">Life is too short for bad coffee..</h4>
+            <p class="text-center">Start crafting your personalized favorite section now!</p>
+            <a href="{% url 'favourite_list' %}" class="btn button-action my-5 mx-auto d-block">Click here for your
+                favourite recipes</a>
+        </div>
+        {{ user_favourite_recipes }}
+        <div class="container col-md-12">
+            <div class="d-flex flex-row flex-wrap justify-content-center">
+                {% for recipe in recipes %}
+                {% if recipe.user == request.user %}
+                <a href="{% url 'recipe_detail' pk=recipe.pk %}" class="recipes recipe-card-title"
+                    aria-label="Click to view {{recipe.title}}">
+                    <div class="card m-3 recipe-card">
+                        <img src="{{recipe.image.url}}" alt="{{recipe.image_alt}}" class="card-img-top">
+                        <div class="card-overlay">
+                            {% if recipe.is_favourite %}
+                            <i class="fa fa-star icon-favourite card-overlay-icon"></i>
+                            {% endif %}
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title recipe-card-title">{{recipe.title}}</h2>
+                        </div>
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
