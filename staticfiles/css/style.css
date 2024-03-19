@@ -130,6 +130,7 @@ main {
     margin-top: 0;
     color: #fff;
     text-align: center;
+    width: 900px;
 }
 
 .about h1 {
@@ -147,6 +148,10 @@ main {
     color: #fff;
     margin-top: 40px;
     text-align: center;
+}
+
+.about a {
+    color: #fff;
 }
 
 /* add item page */
@@ -230,6 +235,6 @@ form {
 .footer {
     width: 100%;
     color: #CD853F; 
-    padding: 10px 0; 
+    padding: 0; /* to close the gap between main and footer in about page */
     text-align: center;
 }

@@ -10,12 +10,12 @@ Whether you're a coffee aficionado looking to expand your repertoire of coffee c
 ## Index
 * [User Stories](#user-stories)
 * [Workflow](#workflow)
+   * [Agile Process](#agile-process)
+   * [Models](#models)
 * [Design](#design)
    * [Wireframe](#wireframe)
-   * [Database](#database)
    * [colours](#colours)
    * [Branding](#branding)
-* [Agile Process](#agile-process)
 * [Features](#features)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
@@ -31,7 +31,7 @@ Whether you're a coffee aficionado looking to expand your repertoire of coffee c
 | ----------- | ----------- | ----------- |
 | Find quick and easy iced coffee recipes | Make them during my morning routine | 1: user can easily navigate through the website to find what they're interested in 2: user can click on a post to read the full text |
 | Explore the nutrition facts of the recipes | Align it with my dietary preferences | 1: add nutrition facts to the recipe |
-| Search the blog | Quickly find the recipe I want | 1: Search bar in navigation area |
+| Search the blog | Quickly find the recipe I want | 1: search bar in navigation area |
 | Create an account | Store my favourite recipes | 1: user can create account  2: user can log in 3: user can log out |
 
 #### As a logged in user ( in addition to the previous stories )
