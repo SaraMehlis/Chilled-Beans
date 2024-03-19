@@ -107,7 +107,7 @@ main {
 
 #detail-image {
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
 }
 
 /*about page*/
@@ -174,7 +174,8 @@ main {
     width: 100%;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    margin-bottom: 20px;
 }
 
 form {

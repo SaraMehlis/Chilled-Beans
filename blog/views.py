@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView 
 from django.contrib import messages
 from .models import Recipe
-from .form import RecipeForm
+from .forms import RecipeForm
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
 from django.db.models import Q
