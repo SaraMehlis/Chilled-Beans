@@ -37,11 +37,22 @@ Whether you're a coffee aficionado looking to expand your repertoire of coffee c
 #### As a logged in user ( in addition to the previous stories )
 |I want to.. | So that I can.. | Acceptance Criteria |
 | ----------- | ----------- | ----------- |
+| Add my recipes | Share my recipes with other users | 1: create add button 2:create form for adding recipes |
+| Modify or delete my recipes | Keep my recipes updated | 1: add edit button 2: add delete button |
+| Add recipes to my favourite section | View my favourite recipes easily and quickly | 1: create add favourite button |
 
+#### As an owner
+|I want to.. | So that I can.. | Acceptance Criteria |
+| ----------- | ----------- | ----------- |
+| Integrate social media links | Promote my blog | 1:add social media icons to the footer |
+| Add contact email for feedback | Improve the website based on user feedback and emerging trends in the iced coffee community | 1: add contact email in about page |
 
+#### Out of scope for this release
+| As a.. | I want to.. | So that I can.. | Acceptance Criteria |
+|-------| ----------- | ----------- | ----------- |
+| User | Comment on the recipes | I ask anything I am not sure with | 1: add comments on the recipe |
+| Owner | Monitor and moderate user recipes | Ensure the quality of the recipe |  1: admin can approve the recipes |
 
-
-Out of scope for this release:
 
 
 
