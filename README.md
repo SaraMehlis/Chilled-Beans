@@ -117,7 +117,8 @@ Future features not implemented at this time include:
 - GitHub Projects used for Agile Methodology
 
 ## Testing
-
+Results of manual testing:
+[Testing](testing.md)
 
 ## Responsiveness
 ## Browser Compatibility

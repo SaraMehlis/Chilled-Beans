@@ -213,6 +213,20 @@ form {
     background-color: #a46f35;
 }
 
+/* confirm message after add recipe */
+#confirm-container {
+    text-align: center;
+}
+
+.confirm-content h1 {
+    margin-bottom: 20px; 
+}
+
+#confirm-container .btn {
+    margin-top: 20px; 
+}
+
+
 .footer::before {
     content: '';
     display: block;

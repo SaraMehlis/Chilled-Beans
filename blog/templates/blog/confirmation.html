@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-<div id="delete-conatainer">
+<div id="confirm-conatainer">
   <div>
     <h1>You have successfully added a recipe.</h1>
   </div>
+  <div class="confirm-content">
 
 
-    
-    <div><a href="{% url 'index' %}" class="btn btn-primary"> Go to recipes</a>  </div>  
-</div>
+
+    <a href="{% url 'index' %}" class="btn"> Go to recipes</a>
+  </div>
 
 
-{% endblock %}
+  {% endblock %}
