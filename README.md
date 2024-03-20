@@ -63,39 +63,57 @@ I used Github projects to convert my user stories into actionable tasks. The acc
 
 ### Models
 In Chilled Beans I used the Django AllAuth User Model and created a custom Add Recipe Model.  This included the following fields:
+![image](static/images/model.PNG)
 
-|      Name            |     Type                   |     Key  |
-|----------------------|----------------------------|----------|
-| Created By | User model | ForeignKey | 
-| Title | CharField |  |
-| Slug | SlugField |  |
-| Ingredients | TextField |  |
-| Instructions | TextField |  |
-| Nutrition Information | TextField |  |
-| Image | CloudinaryField |  |
-| Created On | DateTime |  |
 ## Design
 ### Wireframes and Features
+The site will be fully responsive and accessible on mobile, tablet and desktop devices.
 
+**All Users:**
+- Have access to home page and about us page.
+- Are able to view recipes
+- Are able to use the search functionality
+![image](static/images/home-all.PNG)
+![image](static/images/about.PNG)
+![image](static/images/recipe-page.PNG)
+
+**Logged In Users:**
+- Can add recipes
+- Can edit and delete their own recipes
+![image](static/images/add-recipe.PNG)
+![image](static/images/recipe-edit.PNG)
 
 ## Design Choices
 ###  Colours
-
+I used [coolors.co] (https://https://coolors.co/000000-ffffff-a46f35-cd853f) to generate my colour palette:
+![image](static/images/color-pallet.PNG)
+I chose specific colors to ensure good readability and visual appeal on the website. I used black for the font color to provide high contrast against the white background, which enhances readability. Additionally, I opted for a light brown color for buttons to maintain a subtle and cohesive design, while using a darker brown shade for hover effects to create visual feedback and interactivity.
 
 ### Branding
 
-### Typography
+![image](static/images/logo.PNG)
 
-## Agile Process
+I opted for a simplistic approach when designing the brand logo for the ice coffee blog, aiming to capture the essence of the product in a clear and straightforward manner. To create the logo, I utilized design.com to craft a visually appealing representation of the blog's theme and purpose.
 
-## Features
 
-###
-###
-###
-Future Features
+## Future Features
+Future features not implemented at this time include:
+- Adding a "favorite" button, allowing users to mark recipes as favorites for quick and easy access.
+- Implementing admin authorization for recipes to ensure the quality and reliability of the recipes shared on the platform.
+- Allowing users to leave comments on recipes, fostering communication and enabling users to share feedback and suggestions for improvement.
+
 
 ## Technologies Used
+- HTML
+- CSS
+- Bootstrap
+- Python
+- Django
+- ElephantSQL Postgres Database
+- Cloudinary - All user submitted recipe photos are uploaded to cloudinary
+- GitPod development environment used
+- GitHub used for version control and code hosting
+- GitHub Projects used for Agile Methodology
 
 ## Testing
 
