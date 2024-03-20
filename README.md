@@ -63,6 +63,7 @@ I used Github projects to convert my user stories into actionable tasks. The acc
 
 ### Models
 In Chilled Beans I used the Django AllAuth User Model and created a custom Add Recipe Model.  This included the following fields:
+
 ![image](static/images/model.PNG)
 
 ## Design
