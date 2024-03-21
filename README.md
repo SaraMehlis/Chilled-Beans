@@ -73,7 +73,8 @@ Anyone who loves ice coffee and wants to try new recipes.
 ## Workflow
 ### Agile Methodology
 I used Github projects to convert my user stories into actionable tasks. The acceptance criteria was very helpful to ensure all necessary tasks were completed.
-<!-- image of github projects-->
+
+![image](static/images/projects.PNG)
 
 ### Models
 In Chilled Beans I used the Django AllAuth User Model and created a custom Add Recipe Model.  This included the following fields:
