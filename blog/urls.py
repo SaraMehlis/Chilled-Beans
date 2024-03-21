@@ -14,4 +14,4 @@ urlpatterns = [
     path('search/', SearchResultsView.as_view(), name='search_results'),
 ]
 
-handler404 = 'your_app.views.custom_page_not_found'
+handler404 = 'blog.views.custom_page_not_found'
