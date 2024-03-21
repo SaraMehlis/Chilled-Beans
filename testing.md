@@ -56,7 +56,7 @@ Due to the nature of the code and the need to accommodate complex expressions, I
 | Register | Link to register page | Redirect to register page | Clicked it | Pass |
 | Log In | Link to login page | Redirect to login page | Clicked it | Pass |
 | Log Out | Link to logout page | Redirect to logout page | Clicked it | Pass |
-| Search bar | Search recipes | Populate search results | Submit searches | Pass |
+| Search bar | Search recipes | Populate search results | Submit search | Pass |
 
 #### Footer:
 | Feature | Action | Expected outcome | Testing Performance | Pass/Fail |

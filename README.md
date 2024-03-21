@@ -7,6 +7,17 @@ Welcome to Chilled Beans, your ultimate destination for all things related to ic
 
 Whether you're a coffee aficionado looking to expand your repertoire of coffee creations or a beginner wanting to learn the basics, Chilled Beans has got you covered.
 
+
+#### Goals: 
+- An easy-to-use platform to store iced coffee recipes. 
+- Provide nutrition information so users are aware of them because some recipres could have high calories. 
+- Mobile-friendly access for convenience. 
+
+
+#### Target Audience: 
+Anyone who loves ice coffee and wants to try new recipes.
+
+
 ## Index
 * [User Stories](#user-stories)
 * [Workflow](#workflow)
@@ -66,6 +77,7 @@ In Chilled Beans I used the Django AllAuth User Model and created a custom Add R
 
 ![image](static/images/model.PNG)
 
+
 ## Design
 ### Wireframes and Features
 The site will be fully responsive and accessible on mobile, tablet and desktop devices.
@@ -116,11 +128,16 @@ Future features not implemented at this time include:
 - GitHub used for version control and code hosting
 - GitHub Projects used for Agile Methodology
 
+
 ## Testing
 Results of manual testing:
 [Testing](testing.md)
 
+
 ## Responsiveness
+This website has been tested and is fully responsive on Desktop, Ipad and mobile devices.
+
+
 ## Browser Compatibility
 
 
@@ -131,13 +148,44 @@ Results of manual testing:
 
 
 ## Deployment
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
+
+| Key | Value |
+| --- | --- |
+| `CLOUDINARY_URL` | user's own value |
+| `DATABASE_URL` | user's own value |
+| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `SECRET_KEY` | user's own value |
+
+Heroku needs two additional files in order to deploy properly.
+
+- requirements.txt
+- Procfile
+
+You can install this project's **requirements** (where applicable) using:
+
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+- `pip3 freeze --local > requirements.txt`
+
+The **Procfile** can be created with the following command:
+
+- `echo web: gunicorn app_name.wsgi > Procfile`
+- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+The project should now be connected and deployed to Heroku!
 
 
-
-
-
-# Credits
-
+## Credits
 - Code Institute I Think Therefore I Blog. 
 - ChatGPT was used for troubleshooting, bug fixing and content generating.
 - Logo by Design.com.
