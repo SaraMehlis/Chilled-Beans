@@ -42,3 +42,8 @@ I used the CI Python Linter https://pep8ci.herokuapp.com/# on all my .py files. 
 | views.py | ![Screenshot](static/images/views.py-validator.PNG) |
 
 Due to the nature of the code and the need to accommodate complex expressions, I encountered difficulties in complying with the PEP8 standards, particularly regarding line length. While adhering to the guidelines is important, in certain cases, maintaining readability and clarity took precedence.
+
+
+### Manual Testing
+
+

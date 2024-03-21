@@ -95,3 +95,7 @@ class SearchResultsView(ListView):
             recipes = Recipe.objects.all()
 
         return recipes
+
+def custom_page_not_found(request, exception):
+    return render(request, '404.html', status=404)
+
