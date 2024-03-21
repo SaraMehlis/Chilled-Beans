@@ -126,7 +126,7 @@ main {
 
 
 .about {
-    padding: 20px, 0;
+    padding: 20px 0;
     margin-top: 0;
     color: #fff;
     text-align: center;
@@ -184,6 +184,8 @@ form {
     border-radius: 5px;
 }
 
+/* to style upload image for recipes */
+/* stylelint-disable */
 #id_image::-webkit-file-upload-button {
     background-color: #CD853F; 
     color: #000;
@@ -193,7 +195,7 @@ form {
     border-radius: 5px;
     cursor: pointer;
 }
-
+/* stylelint-enable */
 
 #id_image::-webkit-file-upload-button:hover {
     background-color: #a46f35; 
