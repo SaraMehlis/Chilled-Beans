@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'cloudinary',
-    'cloudinary_storage',
     'crispy_forms',
     'crispy_bootstrap5',
     'blog',
