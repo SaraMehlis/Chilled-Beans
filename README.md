@@ -1,7 +1,10 @@
-# Chilled Beans
+# [Chilled Beans](https://chilled-beans-b5ddfca96935.herokuapp.com/)
 ### Full-Stack capstone project. Created during the Code Institute Full-Stack developer bootcamp.
 
 ![Images of chilled beans ]
+
+[Link to Chilled Beans website](https://chilled-beans-b5ddfca96935.herokuapp.com/)
+
 ## Introduction
 Welcome to Chilled Beans, your ultimate destination for all things related to iced coffee! At Chilled Beans, we're passionate about bringing you the best recipes, tips, and tricks for making delicious and refreshing iced coffee drinks right in the comfort of your own home.
 

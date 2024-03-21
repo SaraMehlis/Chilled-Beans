@@ -262,6 +262,43 @@ form {
     text-align: center;
 }
 
+/* tablets */
+@media screen and (max-width: 768px) {
+    /* Navbar styling */
+    .navbar {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .navbar-brand {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 10px; /* Adjust padding */
+    }
+
+    .navbar-toggler {
+        font-size: 16px; 
+        padding: 8px;
+    }
+
+    /* Search bar */
+    .navbar form {
+        margin-left: auto; 
+    }
+
+    .navbar form input[type="search"] {
+        font-size: 14px;
+        padding: 6px 8px; 
+    }
+
+    .navbar form .btn {
+        font-size: 14px; 
+        padding: 6px 16px;  
+    }
+}
+
 /* search result page */
 @media screen and (max-width: 768px) {
     .container {
