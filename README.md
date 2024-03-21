@@ -1,7 +1,7 @@
 # [Chilled Beans](https://chilled-beans-b5ddfca96935.herokuapp.com/)
 ### Full-Stack capstone project. Created during the Code Institute Full-Stack developer bootcamp.
 
-![Images of chilled beans ]
+![Images of chilled beans ](static/images/am-i-responsive.PNG)
 
 [Link to Chilled Beans website](https://chilled-beans-b5ddfca96935.herokuapp.com/)
 
@@ -142,12 +142,29 @@ This website has been tested and is fully responsive on Desktop, Ipad and mobile
 
 
 ## Browser Compatibility
+The website has been tested and is being displayed as expected on Safari, Google Chrome and Firefox as well as on android and apple devices.
+
+#### On Google Chrome:
+
+![image](static/images/google-chrome-test.PNG)
+
+#### On Apple device:
+
+![image](static/images/i-phone-compitability.PNG)
 
 
 ## Bugs
 
+![image](static/images/bug-nav.PNG)
+
+I've encountered a bug where boxes appear around navbar links on tablet-sized screens. I attempted to address this by reducing the padding around the navbar links, but unfortunately, the boxes continue to persist.
+
+![image](static/images/card-bug.png)
+Since the image URL is not a static file, I should not use the {% static %} template tag. Instead I use {{image_url}}.(solved)
 
 
+![image](static/images/footer-bug.png)
+I added min-height: 100vh; to body to ensures the body fills at least the height of the viewport.(solved)
 
 
 ## Deployment

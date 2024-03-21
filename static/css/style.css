@@ -268,21 +268,21 @@ form {
 @media screen and (max-width: 768px) {
     /* Navbar styling */
     .navbar {
-        padding: 10px; /* Reduce padding */
+        padding: 10px; 
     }
 
     .navbar-brand {
-        font-size: 18px; /* Reduce font size */
+        font-size: 18px; 
     }
 
     .navbar-nav .nav-link {
-        font-size: 14px; /* Reduce font size */
-        padding: 8px 10px; /* Adjust padding */
+        font-size: 14px; 
+        padding: 4px 5px; 
     }
 
     .navbar-toggler {
-        font-size: 16px; /* Reduce font size */
-        padding: 8px; /* Adjust padding */
+        font-size: 16px;
+        padding: 8px; 
     }
 
     /* Search bar */
