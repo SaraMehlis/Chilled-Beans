@@ -1,15 +1,23 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
 {% block content %}
-<div id="confirm-conatainer">
-  <div>
-    <h1>You have successfully added a recipe.</h1>
-  </div>
-  <div class="confirm-content">
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            
+
+            <p class="confirm">{% trans 'You have successfully added a recipe' %}</p>
+        </div>
+    </div>
+    <div class="confirm-content">
 
 
-
-    <a href="{% url 'index' %}" class="btn"> Go to recipes</a>
-  </div>
-
-
-  {% endblock %}
+      <a href="{% url 'index' %}" class="btn"> Go to recipes</a>
+    </div>
+  
+</div>
+{% endblock %}

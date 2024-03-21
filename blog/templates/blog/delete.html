@@ -1,14 +1,23 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
 {% block content %}
-<div id="delete-conatainer">
-  <div>
-    <h1>You have successfully deleted your recipe.</h1>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            
+
+            <p class="confirm">{% trans 'You have successfully deleted a recipe' %}</p>
+        </div>
+    </div>
+    <div class="confirm-content">
 
 
-    
-    <div><a href="{% url 'index' %}" class="btn"> Go to Home</a>  </div>  
+      <a href="{% url 'index' %}" class="btn"> Go to recipes</a>
+    </div>
+  
 </div>
-
-
 {% endblock %}

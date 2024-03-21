@@ -46,4 +46,34 @@ Due to the nature of the code and the need to accommodate complex expressions, I
 
 ### Manual Testing
 
+#### Navigation bar links:
+| Feature | Action | Expected outcome | Testing Performance | Pass/Fail |
+|-------|-------|-------|-------|-------|
+| Logo | Link to home page | Redirect to home | Clicked it | Pass |
+| Home | Link to home page | Redirect to home | Clicked it | Pass |
+| About | Link to About page | Redirect to about | Clicked it | Pass |
+| Add recipe | Link to about page | Redirect to about | Clicked it | Pass |
+| Register | Link to register page | Redirect to register page | Clicked it | Pass |
+| Log In | Link to login page | Redirect to login page | Clicked it | Pass |
+| Log Out | Link to logout page | Redirect to logout page | Clicked it | Pass |
+| Search bar | Search recipes | Populate search results | Submit searches | Pass |
+
+#### Footer:
+| Feature | Action | Expected outcome | Testing Performance | Pass/Fail |
+|-------|-------|-------|-------|-------|
+| Footer | Clickable links to social media platforms | Social media links | Click it | Pass |
+
+#### Recipes:
+| Feature | Action | Expected outcome | Testing Performance | Pass/Fail |
+|-------|-------|-------|-------|-------|
+| View Recipe button | Button | Redirect to detailed recipe page | Click it | Pass |
+| Add Recipe choose Image button | Button | Upload image | Click it | Pass |
+| Add Recipe button | Button | Add recipe | Click it | Pass |
+| Edit Button | Button | Redirect to recipe form | Click it | Pass |
+| Delete Button | Button | Redirect to confirmatory page | Click it | Pass |
+| Confirm delete page go home button | Button | Redirect to home page | Click it | Pass |
+
+
+
+
 
