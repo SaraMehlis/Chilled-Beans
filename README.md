@@ -161,10 +161,12 @@ The website has been tested and is being displayed as expected on Safari, Google
 I've encountered a bug where boxes appear around navbar links on tablet-sized screens. I attempted to address this by reducing the padding around the navbar links, but unfortunately, the boxes continue to persist.
 
 ![image](static/images/card-bug.png)
+
 Since the image URL is not a static file, I should not use the {% static %} template tag. Instead I use {{image_url}}.(solved)
 
 
 ![image](static/images/footer-bug.png)
+
 I added min-height: 100vh; to body to ensures the body fills at least the height of the viewport.(solved)
 
 
@@ -200,9 +202,9 @@ If you have your own packages that have been installed, then the requirements fi
 The **Procfile** can be created with the following command:
 
 - `echo web: gunicorn app_name.wsgi > Procfile`
-- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+- *replace **app_name** with the name of the primary Django app name; the folder where settings.py is located*
 
-For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+For Heroku deployment, I followed these steps to connect my own GitHub repository to the newly created app:
 The project should now be connected and deployed to Heroku!
 
 

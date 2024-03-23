@@ -51,7 +51,10 @@ def recipeform(request):
 
 
 def edit_recipe(request, slug):
-    recipe = Recipe.objects.get(slug=slug)
+    recipe = get_object_or_404(Recipe, slug=slug)
+    if recipe.created_by != request.user:
+        return redirect('recipe_detail', slug=slug)
+    
     form = RecipeForm(
         request.POST or None,
         request.FILES or None,
@@ -68,7 +71,10 @@ def edit_recipe(request, slug):
 
 
 def delete_recipe(request, slug):
-    recipe = Recipe.objects.filter(slug=slug)
+    recipe = get_object_or_404(Recipe, slug=slug)
+    if recipe.created_by != request.user:
+        return redirect('recipe_detail', slug=slug)
+    
     recipe.delete()
     message = 'Recipe deleted successfully.'
     context = {'message': message,
