@@ -5,16 +5,18 @@
 {% block content %}
 
 <div id="recipe-detail-container">
+
     <div id="details">
 
         <div>
             <h1 style="text-align: center;">{{ recipe.title }}</h1>
             {% if recipe.image %}
-            <img src="{{ recipe.image.url }}" style="max-width: 300px;" id="detail-image" alt="{{ recipe.title }}">
+            <img src="{{ recipe.image.url }}" class="small-image" id="detail-image" alt="{{ recipe.title }}">
             {% else %}
             <p>No Image</p>
             {% endif %}
         </div>
+
         <div class="description-1">
             <div>
                 <h2>Ingredients:</h2>

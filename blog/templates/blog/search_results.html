@@ -11,7 +11,7 @@
             {% for recipe in recipes %}
                 <li>
                     {% if recipe.image %}
-                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="search-image">
                     {% endif %}
                     <h2>{{ recipe.title }}</h2>
                     <p>{{ recipe.ingredient }}</p>
