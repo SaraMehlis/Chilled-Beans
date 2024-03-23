@@ -73,7 +73,9 @@ Due to the nature of the code and the need to accommodate complex expressions, I
 | Delete Button | Button | Redirect to confirmatory page | Click it | Pass |
 | Confirm delete page go home button | Button | Redirect to home page | Click it | Pass |
 
+## Defensive Programming
 
+I added the following line of code as a defensive mechanism to ensure that only the owner of a recipe can edit or delete it. This check verifies that the currently logged-in user attempting to edit or delete the recipe is the same user who originally created it. If the user is not the owner, the code prevents them from performing these actions, thereby safeguarding the integrity of the recipe ownership.
 
-
-
+if recipe.created_by != request.user:
+    return redirect('recipe_detail', slug=slug)

@@ -76,6 +76,15 @@ I used Github projects to convert my user stories into actionable tasks. The acc
 
 ![image](static/images/projects.PNG)
 
+### MoSCoW Prioritization
+
+I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
+
+- **Must Have**: guaranteed to be delivered (*max 60% of stories*)
+- **Should Have**: adds significant value, but not vital (*the rest ~20% of stories*)
+- **Could Have**: has small impact if left out (*20% of stories*)
+- **Won't Have**: not a priority for this iteration
+
 ### Models
 In Chilled Beans I used the Django AllAuth User Model and created a custom Add Recipe Model.  This included the following fields:
 
@@ -127,7 +136,21 @@ Future features not implemented at this time include:
 - Python
 - Django
 - ElephantSQL Postgres Database
+This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+  - Click **Create New Instance** to start a new database.
+  - Provide a name (this is commonly the name of the project: chilled-beans).
+  - Select the **Tiny Turtle (Free)** plan.
+  - You can leave the **Tags** blank.
+  - Select the **Region** and **Data Center** closest to you.
+  - Once created, click on the new database name, where you can view the database URL and Password.
 - Cloudinary - All user submitted recipe photos are uploaded to cloudinary
+This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+To obtain your own Cloudinary API key, create an account and log in.
+  - For *Primary interest*, you can choose *Programmable Media for image and video API*.
+  - Optional: *edit your assigned cloud name to something more memorable*.
+  - On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
+  - Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
 - GitPod development environment used
 - GitHub used for version control and code hosting
 - GitHub Projects used for Agile Methodology
@@ -171,6 +194,7 @@ I added min-height: 100vh; to body to ensures the body fills at least the height
 
 
 ## Deployment
+#### Heroku deployment
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
 Deployment steps are as follows, after account setup:
@@ -206,6 +230,62 @@ The **Procfile** can be created with the following command:
 
 For Heroku deployment, I followed these steps to connect my own GitHub repository to the newly created app:
 The project should now be connected and deployed to Heroku!
+
+#### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+
+- `pip3 install -r requirements.txt`.
+
+You will need to create a new file called `env.py` at the root-level,
+and include the same environment variables listed above from the Heroku deployment steps.
+
+Sample `env.py` file:
+
+```python
+import os
+
+os.environ.setdefault("CLOUDINARY_URL", "user's own value")
+os.environ.setdefault("DATABASE_URL", "user's own value")
+os.environ.setdefault("SECRET_KEY", "user's own value")
+
+# local environment only (do not include these in production/deployment!)
+os.environ.setdefault("DEBUG", "True")
+```
+Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
+- Start the Django app: `python3 manage.py runserver`
+- Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
+- Make any necessary migrations: `python3 manage.py makemigrations`
+- Migrate the data to the database: `python3 manage.py migrate`
+- Create a superuser: `python3 manage.py createsuperuser`
+- Load fixtures (if applicable): `python3 manage.py loaddata file-name.json` (repeat for each file)
+- Everything should be ready now, so run the Django app again: `python3 manage.py runserver`
+
+#### Cloning
+You can clone the repository by following these steps:
+1. Go to the [GitHub repository](https://github.com/SaraMehlis/Chilled-Beans) 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+	- `git clone https://github.com/SaraMehlis/Chilled-Beans`
+7. Press Enter to create your local clone.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/SaraMehlis/Chilled-Beans)
+
+#### Forking
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/SaraMehlis/Chilled-Beans)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
 
 ## Credits
