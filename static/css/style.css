@@ -267,6 +267,12 @@ form {
     text-align: center;
 }
 
+@media screen and (max-width: 576px) {
+    .container {
+        margin-bottom: 30px; 
+    }
+}
+
 /* tablets */
 @media screen and (max-width: 768px) {
     /* Navbar styling */
@@ -303,6 +309,7 @@ form {
         font-size: 14px; 
         padding: 6px 16px; 
     }
+
 }
 
 /* search result page */
